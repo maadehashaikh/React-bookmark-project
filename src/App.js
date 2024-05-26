@@ -2,11 +2,9 @@ import React , {useState} from 'react';
 import './App.css';
 import BookmarkForm from './BookmarkForm';
 import BookmarkList from './BookmarkList';
-
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [inputValue, setInputValue] = useState('');
-
   const addBookmark = (url) => {
     setBookmarks([...bookmarks, url]);
     setInputValue('');
@@ -18,11 +16,9 @@ function App() {
     const updatedBookmarks = bookmarks.map((bookmark, i) => (i === index ? newUrl : bookmark));
     setBookmarks(updatedBookmarks);
   };
-
   const deleteAllBookmarks = () => {
     setBookmarks([]);
   };
-
   return (
     <div className="App">
        <h1>My BookMarks</h1><hr/>
@@ -32,5 +28,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

@@ -1,5 +1,4 @@
 import React  from 'react'
-
 function BookmarkForm({inputValue , setInputValue , addBookmark , deleteAllBookmarks}) {
   const handleChange = (e) => {
     setInputValue(e.target.value);
@@ -27,5 +26,4 @@ function BookmarkForm({inputValue , setInputValue , addBookmark , deleteAllBookm
       </form>
   );
 };
-
 export default BookmarkForm
